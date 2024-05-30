@@ -1,15 +1,14 @@
 import './categories.styles.scss';
-import './components/category-item/category-item.component';
-import CategoryMenu from './components/catetgory-menu/category-menu.component';
-const  App=()=> {
- 
-  
+import  home from './components/routes/home/home.component';
+import { Routes, Route } from 'react-router-dom';
+import Navigation from './components/routes/navigation/navigation.component';
+const App = () => {
   return (
-    <CategoryMenu/>
-
+    <Routes>
+    <Navigation/>
+      <Route path='/' index element={<home />} />
+    </Routes>
   );
-    
-
 }
 
 export default App;
