@@ -1,3 +1,4 @@
+import { Outlet } from 'react-router-dom';
 import './category-item.component.styles.scss';
 
 const CategoryItem = ({ category }) => {
@@ -12,6 +13,9 @@ const CategoryItem = ({ category }) => {
         <div className="category-body-container">
         <h2>{title}</h2>
         <p>Shop now</p>
+        </div>
+        <div>
+        <Outlet/>
         </div>
        </div>
     );
