@@ -1,4 +1,3 @@
-import { Outlet } from "react-router-dom";
 import CategoryMenu from "../../catetgory-menu/category-menu.component";
 const Home = () => {
   const categories = [

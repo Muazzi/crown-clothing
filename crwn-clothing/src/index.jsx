@@ -2,20 +2,26 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.scss';
 import reportWebVitals from './reportWebVitals';
-import Shop from './App';
 import { RouterProvider} from 'react-router-dom';
 import {
   createBrowserRouter,
 } from "react-router-dom";
-import Navigation from './components/routes/navigation/navigation.component';
 import App from './App';
+import SignIn from './components/routes/signin/signIn.component';
+
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Navigation/>,
+    element: <App/>,
     children: [
-      { path: "/", element: <App/> },
-      { path: "/shop", element: <Shop/> },
+      {
+        path: "shop",
+        element: <h1>I am the shop page</h1>,
+      },
+      {
+        path: "sign-in",
+        element: <SignIn/>,
+      },
     ],
    
   },
